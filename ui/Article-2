@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Article One | Tijo Thomas
+            Article Two | Tijo Thomas
         </title>
         <meta name="viewport" content="width=device_width, initial-scale=1"/>
     </head>
@@ -12,9 +12,9 @@
         </div>
         <hr>
         <h3>
-            Article One
+            Article Two
         </h3>
-        <div>October 2</div>
+        <div>October 3</div>
         <div>
             <p>
                 There has been development here. This is an additional sentence.
