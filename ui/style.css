@@ -1,8 +1,11 @@
+* {
+    border:1px solid lightgray;
+}
+
 body {
     font-family: sans-serif;
     background-color: white;
     margin-top: 60px;
-    border:1px solid lightgray;
 }
 h3 {
     text-decoration:underline;
