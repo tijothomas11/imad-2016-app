@@ -38,4 +38,5 @@ button:hover {
 }
 #dateDiv {
     color:green;
+    float: left;
 }
