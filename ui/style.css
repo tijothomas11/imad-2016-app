@@ -40,3 +40,6 @@ button:hover {
     color:green;
     float: right;
 }
+#greeting {
+    text-shadow: 1px 1px #000;
+}
