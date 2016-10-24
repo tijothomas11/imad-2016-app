@@ -18,18 +18,13 @@
             	thour=now.getHours();
             	tmin=now.getMinutes();
             	tsec=now.getSeconds();
-            	var ap;
-            	
-            	if(nhour==0){ap=" AM";nhour=12;}
-                else if(nhour<12){ap=" AM";}
-                else if(nhour==12){ap=" PM";}
-                else if(nhour>12){ap=" PM";nhour-=12;}
             	
             	if (tmin<=9) { tmin="0"+tmin; }
             	if (tsec<=9) { tsec="0"+tsec; }
+            	if (thour<10) { thour="0"+thour; }
             	
             	today = days[now.getDay()] + ", " + date + " " + months[now.getMonth()] + ", " + (fourdigits(now.getYear()));
-            	time = thour + ":" + tmin +":"+ tsec + ""+ap;
+            	time = thour + ":" + tmin +":"+ tsec;
             	document.getElementById("dateDiv").innerHTML = today;
             	document.getElementById("timeDiv").innerHTML = time;
             }
