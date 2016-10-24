@@ -23,8 +23,10 @@
             	if (tsec<=9) { tsec="0"+tsec; }
             	if (thour<10) { thour="0"+thour; }
             	
-            	today = days[now.getDay()] + ", " + date + " " + months[now.getMonth()] + ", " + (fourdigits(now.getYear())) + " - " + thour + ":" + tmin +":"+ tsec;
+            	today = days[now.getDay()] + ", " + date + " " + months[now.getMonth()] + ", " + (fourdigits(now.getYear()));
+            	time = thour + ":" + tmin +":"+ tsec;
             	document.getElementById("dateDiv").innerHTML = today;
+            	document.getElementById("timeDiv").innerHTML = time;
             }
             setInterval("showDate()", 1000);
         </script>
@@ -32,6 +34,7 @@
     <body>
         <div class="container">
             <div id="dateDiv"></div>
+            <div id="timeDiv"></div>
             <div class="center">
                 <img id="madi" src="http://www.comingsoon.net/assets/uploads/2016/05/AssassinsCreed.jpg" class="img-medium"/>
             </div>
