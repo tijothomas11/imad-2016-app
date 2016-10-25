@@ -1,39 +1,48 @@
 <!doctype html>
 <html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-        <SCRIPT LANGUAGE="JavaScript">
-            
-        </script>
-    </head>
-    <body>
-        <div class="container">
-            <div id="dateDiv"></div><br>
-            <div id="timeDiv"></div>
-            <div class="center">
-                <img id="madi" src="http://www.comingsoon.net/assets/uploads/2016/05/AssassinsCreed.jpg" class="img-medium"/>
-            </div>
-            <hr>
-            <h3>Personal</h3>
-            <div>
-                <p id="greeting">Hi! I am Tijo. This will be awesome</p>
-                <h4 style="font-family:cursive; color:#3f0084">Building this up!</h4>            
-            </div>
-            <hr>
-            <h3>Profession</h3>
-            <div>Will let you know when I have one!
-            <br/>
-            <hr>
-            <p>This button <button id="counter">click me!</button> has been clicked <span id="count">0</span> times</p>
-            </div>
-            <br/>
-            <input type="text" id="name" placeholder="Enter your name"></input>
-            <input type="Submit" value="Submit" id="submit_btn"></input>
-            <ul id="namelist">
-                
-            </ul>
-            <script type="text/javascript" src="/ui/main.js">
-            </script>
-        </div>
-    </body>
+  <head>
+    <link href="/ui/style.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <div class="container">
+      <ul class="dropdown">
+        <li><a href="http://tijothomas11.imad.hasura-app.io/">Home</a></li>
+        <li><a href="http://tijothomas11.imad.hasura-app.io/article-1">Anonymous venting</a></li>
+        <li class="dropdown2">
+          <a href="http://tijothomas11.imad.hasura-app.io/article-2" class="dropbtn">Article 2</a>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+        <li><a href="http://tijothomas11.imad.hasura-app.io/article-3">Article 3</a></li>
+      </ul>
+      <div id="dateDiv"></div><br>
+      <div id="timeDiv"></div>
+      <div class="center">
+          <img id="madi" src="http://www.comingsoon.net/assets/uploads/2016/05/AssassinsCreed.jpg" class="img-medium"/>
+      </div>
+      <hr>
+      <h3>Personal</h3>
+      <div>
+        <p id="greeting">Hi! I am Tijo. This will be awesome</p>
+        <h4 style="font-family:cursive; color:#3f0084">Building this up!</h4>
+      </div>
+      <hr>
+      <h3>Profession</h3>
+      <div>Will let you know when I have one!
+      <br/>
+      <hr>
+      <p>This button <button id="counter">click me!</button> has been clicked <span id="count">0</span> times</p>
+      </div>
+      <br/>
+      <input type="text" id="name" placeholder="Enter your name"></input>
+      <input type="Submit" value="Submit" id="submit_btn"></input>
+      <ul id="namelist"></ul>
+      <script type="text/javascript" src="/ui/main.js">
+      </script>
+    </div>
+  </body>
 </html>
