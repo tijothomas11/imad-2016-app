@@ -20,10 +20,9 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #b3b3b3;
+    float:left;
 }
-li {
-  float: left;
-}
+
 li a, .dropbtn {
     display: inline-block;
     color: white;
