@@ -83,7 +83,7 @@ submit1.onclick = function () {
     };
     var commentInput = document.getElementById('comment');
     var comment = commentInput.value;
-    request.open('GET', 'http://tijothomas11.imad.hasura-app.io/submit-comment?comment=' + comment, true);
+    request.open('GET', 'http://tijothomas11.imad.hasura-app.io/article-1/submit-comment?comment=' + comment, true);
     request.send(null);
 };
 
