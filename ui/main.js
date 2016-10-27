@@ -62,8 +62,8 @@ submit.onclick = function () {
 };
 
 //enter comment
-var submit = document.getElementById('comment_btn');
-submit.onclick = function () {
+var submit1 = document.getElementById('comment_btn');
+submit1.onclick = function () {
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
