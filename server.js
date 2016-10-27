@@ -7,16 +7,16 @@ app.use(morgan('combined'));
 
 var articles = {
     'article-1': {
-    title: 'Article One | Tijo Thomas',
-    heading: 'Article One',
+    title: 'Anonymous Venting | Tijo Thomas',
+    heading: 'Anonymous Venting',
     date: 'October 2',
     content: `
                 <p>
                     There has been development here. This is an additional sentence.
                 </p>
-                <p>
-                    More developement here!
-                </p>`
+                <input type="text" id="name" placeholder="Enter your name"></input>
+                <input type="Submit" value="Submit" id="submit_btn"></input>
+                <ul id="namelist"></ul>`
     },
     'article-2' : {
     title: 'Article Two | Tijo Thomas',
@@ -50,30 +50,42 @@ function createTemplate (data) {
     var heading = data.heading;
     var content = data.content;
     var htmlTemplate =`
-            <html>
+      <html>
         <head>
-            <title>
-                ${title}
-            </title>
-            <meta name="viewport" content="width=device_width, initial-scale=1"/>
-            <link href="/ui/style.css" rel="stylesheet" />
+          <title>
+            ${title}
+          </title>
+          <meta name="viewport" content="width=device_width, initial-scale=1"/>
+          <link href="/ui/style.css" rel="stylesheet" />
         </head>
         <body>
-            <div class="container">
-                <div>
-                    <a href="/">Home</a>
-                </div>
-                <hr>
-                <h3>
-                   ${heading}
-                </h3>
-                <div>${date}</div>
-                <div>
-                    ${content}
-                </div>
+          <div class="container">
+            <div>
+              <ul class="dropdown">
+                <li><a href="/">Home</a></li>
+                <li><a href="/article-1">Anonymous venting</a></li>
+                <li class="dropdown2">
+                  <a href="/article-2" class="dropbtn">Article 2</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </li>
+                <li><a href="/article-3">Article 3</a></li>
+              </ul>
             </div>
+            <hr>
+            <h3>
+              ${heading}
+            </h3>
+            <div>${date}</div>
+            <div>
+              ${content}
+            </div>
+          </div>
         </body>
-    </html>`;
+      </html>`;
     return htmlTemplate;
 }
 app.get('/', function (req, res) {
@@ -89,7 +101,7 @@ app.get('/counter', function(req,res) {
 var names =[];
 app.get('/submit-name', function(req, res) {
     var name = req.query.name;
-    
+
     names.push(name);
     res.send(JSON.stringify(names));
 });
