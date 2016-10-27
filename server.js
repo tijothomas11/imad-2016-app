@@ -112,8 +112,8 @@ var comments =[];
 app.get('/submit-comment', function(req, res) {
     var comment = req.query.comment;
 
-    names.push(name);
-    res.send(JSON.stringify(names));
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
 });
 
 app.get('/:articleName', function(req,res) {
