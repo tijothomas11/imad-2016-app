@@ -14,9 +14,9 @@ var articles = {
                 <p>
                     There has been development here. This is an additional sentence.
                 </p>
-                <input type="text" id="name" placeholder="Enter your name"></input>
-                <input type="Submit" value="Submit" id="submit_btn"></input>
-                <ul id="namelist"></ul>`
+                <input type="text" id="comment" placeholder="Anonymous Comments"></input>
+                <input type="Submit" value="Submit" id="comment_btn"></input>
+                <ul id="commentlist"></ul>`
     },
     'article-2' : {
     title: 'Article Two | Tijo Thomas',
@@ -84,6 +84,8 @@ function createTemplate (data) {
               ${content}
             </div>
           </div>
+          <script type="text/javascript" src="/ui/main.js">
+          </script>
         </body>
       </html>`;
     return htmlTemplate;
@@ -101,6 +103,14 @@ app.get('/counter', function(req,res) {
 var names =[];
 app.get('/submit-name', function(req, res) {
     var name = req.query.name;
+
+    names.push(name);
+    res.send(JSON.stringify(names));
+});
+
+var comments =[];
+app.get('/submit-comment', function(req, res) {
+    var comment = req.query.comment;
 
     names.push(name);
     res.send(JSON.stringify(names));

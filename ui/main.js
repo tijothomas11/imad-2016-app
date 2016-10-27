@@ -17,9 +17,9 @@ img.onclick = function() {
 var button = document.getElementById('counter');
 var counter=0;
 button.onclick = function() {
-    
+
     var request = new XMLHttpRequest();
-    
+
     request.onreadystatechange = function () {
         if(request.readyState === XMLHttpRequest.DONE) {
             if(request.status === 200) {
@@ -29,7 +29,7 @@ button.onclick = function() {
             }
         }
     };
-    
+
     request.open('GET', 'http://tijothomas11.imad.hasura-app.io/counter', true);
     request.send(null);
 };
@@ -39,7 +39,7 @@ button.onclick = function() {
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     var request = new XMLHttpRequest();
-    
+
     request.onreadystatechange = function () {
         if(request.readyState === XMLHttpRequest.DONE) {
             if(request.status === 200) {
@@ -48,7 +48,7 @@ submit.onclick = function () {
                 var list = '';
                 for (var i=0; i<names.length; i++) {
                     list += '<li>' +names[i]+ '</li>';
-                    
+
                 }
                 var ul = document.getElementById('namelist');
                 ul.innerHTML = list;
@@ -58,6 +58,32 @@ submit.onclick = function () {
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
     request.open('GET', 'http://tijothomas11.imad.hasura-app.io/submit-name?name=' + name, true);
+    request.send(null);
+};
+
+//enter comment
+var submit = document.getElementById('comment_btn');
+submit.onclick = function () {
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status === 200) {
+                var comments = request.responseText;
+                comments = JSON.parse(comments);
+                var list = '';
+                for (var i=0; i<comments.length; i++) {
+                    list += '<li>' +comments[i]+ '</li>';
+
+                }
+                var ul = document.getElementById('commentlist');
+                ul.innerHTML = list;
+            }
+        }
+    };
+    var commentInput = document.getElementById('comment');
+    var comment = commentInput.value;
+    request.open('GET', 'http://tijothomas11.imad.hasura-app.io/submit-comment?comment=' + comment, true);
     request.send(null);
 };
 
@@ -72,22 +98,22 @@ function showDate()
             	{
             		return (number < 1000) ? number + 1900 : number;
             	}
-            	
+
             	tnow=new Date();
             	thour=now.getHours();
             	tmin=now.getMinutes();
             	tsec=now.getSeconds();
             	var ap;
-            	
+
             	if(thour==0){ap=" AM";thour=12;}
                 else if(thour<12){ap=" AM";}
                 else if(thour==12){ap=" PM";}
                 else if(thour>12){ap=" PM";thour-=12;}
 
-            	
+
             	if (tmin<=9) { tmin="0"+tmin; }
             	if (tsec<=9) { tsec="0"+tsec; }
-            	
+
             	today = days[now.getDay()] + ", " + date + " " + months[now.getMonth()] + ", " + (fourdigits(now.getYear()));
             	time = thour + ":" + tmin +":"+ tsec+""+ap;
             	document.getElementById("dateDiv").innerHTML = today;
