@@ -15,7 +15,7 @@ var articles = {
                     There has been development here. This is an additional sentence.
                 </p>
                 <input type="text" id="comment" placeholder="Anonymous Comments"></input>
-                <input type="Submit" value="Vent" id="comment_btn"></input>
+                <input type="submit" value="Vent" id="comment_btn"></input>
                 <ul id="commentlist"></ul>`
     },
     'article-2' : {
