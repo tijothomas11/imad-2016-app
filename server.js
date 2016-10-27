@@ -109,7 +109,7 @@ app.get('/submit-name', function(req, res) {
 });
 
 var comments =[];
-app.get('/submit-comment', function(req, res) {
+app.get('/article-1/submit-comment', function(req, res) {
     var comment = req.query.comment;
 
     comments.push(comment);
