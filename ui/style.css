@@ -58,7 +58,9 @@ li.dropdown2 {
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
 
 .dropdown2:hover .dropdown-content {
     display: block;
@@ -87,4 +89,9 @@ button:hover {
 }
 #greeting {
     text-shadow: 1px 1px #ff6d6d;
+}
+comment_btn {
+  width: inherit;
+  height: 100px;
+  border: 1px solid black;
 }
