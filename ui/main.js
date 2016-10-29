@@ -94,8 +94,7 @@ function showDate() {
 	var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
 	var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
 	var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
-	function fourdigits(number)
-	{
+	function fourdigits(number)	{
 		return (number < 1000) ? number + 1900 : number;
 	}
 
@@ -109,7 +108,6 @@ function showDate() {
     else if(thour<12){ap=" AM";}
     else if(thour==12){ap=" PM";}
     else if(thour>12){ap=" PM";thour-=12;}
-
 
 	if (tmin<=9) { tmin="0"+tmin; }
 	if (tsec<=9) { tsec="0"+tsec; }

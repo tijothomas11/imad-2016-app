@@ -86,12 +86,8 @@ button:hover {
 #dateDiv, #timeDiv {
     color:green;
     float: right;
+    width: auto;
 }
 #greeting {
     text-shadow: 1px 1px #ff6d6d;
-}
-comment_btn {
-  
-  height: 100px;
-  border: 1px solid black;
 }
