@@ -62,6 +62,7 @@ submit.onclick = function () {
 };
 
 //enter comment
+window.onload = function() {
 var submit1 = document.getElementById('comment_btn');
 submit1.onclick = function () {
     var request1 = new XMLHttpRequest();
@@ -85,6 +86,7 @@ submit1.onclick = function () {
     var comment = commentInput.value;
     request.open('GET', 'http://tijothomas11.imad.hasura-app.io/article-1/submit-comment?comment=' + comment, true);
     request.send(null);
+};
 };
 
 //Time code
