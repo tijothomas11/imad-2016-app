@@ -30,7 +30,7 @@ button.onclick = function() {
     }
   };
 
-  request.open('GET', 'http://tijothomas11.imad.hasura-app.io/counter', true);
+  request.open('GET', '/counter', true);
   request.send(null);
 };
 
