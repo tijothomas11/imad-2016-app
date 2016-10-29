@@ -91,7 +91,7 @@ button:hover {
     text-shadow: 1px 1px #ff6d6d;
 }
 comment_btn {
-  width: inherit;
+  
   height: 100px;
   border: 1px solid black;
 }
